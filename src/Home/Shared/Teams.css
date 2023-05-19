@@ -1,0 +1,9 @@
+.teams{
+    border: 2px #f74356 solid;
+    gap: 20px;
+}
+.teams img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
