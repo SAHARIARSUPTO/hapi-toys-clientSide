@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import "./Team.json";
 import "./Teams.css";
 
 const Teams = () => {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/teams")
+    fetch("https://hapi-toys-server-sahariarsupto.vercel.app/teams")
       .then((response) => response.json())
       .then((data) => setTeams(data))
       .catch((error) => {
