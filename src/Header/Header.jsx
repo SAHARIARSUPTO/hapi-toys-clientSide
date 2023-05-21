@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/Provider";
 
-
 const Header = () => {
   const { user, handleLogout } = useContext(AuthContext);
 
@@ -20,7 +19,7 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/toys">All Toys</Link>
+              <Link to="/alltoy">All Toys</Link>
             </li>
             <li>
               <Link to="/add">Add A Toy</Link>
@@ -29,11 +28,13 @@ const Header = () => {
               <Link to="/my-toys">My Toys</Link>
             </li>
             <li>
-              <Link to="/blogs">Blogs</Link>
+              <Link to="/blog">Blogs</Link>
             </li>
-            <li>
-              <Link to="/login">Log In</Link>
-            </li>
+            {user ? null : (
+              <li>
+                <Link to="/login">Log In</Link>
+              </li>
+            )}
           </ul>
         </div>
 

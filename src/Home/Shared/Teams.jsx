@@ -5,7 +5,7 @@ const Teams = () => {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch("https://hapi-toys-server-sahariarsupto.vercel.app/teams")
+    fetch("https://hapi-hapi-toys-sahariarsupto.vercel.app/teams")
       .then((response) => response.json())
       .then((data) => setTeams(data))
       .catch((error) => {

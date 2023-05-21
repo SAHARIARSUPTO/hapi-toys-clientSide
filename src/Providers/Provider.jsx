@@ -42,6 +42,7 @@ const Provider = ({ children }) => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    form.reset();
 
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
@@ -66,7 +67,7 @@ const Provider = ({ children }) => {
         setUser(loggedUser);
         setShowAlert(true);
         setAlertMessage("Sign-in Successful!");
-        console.log(loggedUser);
+        
       })
       .catch((error) => {
         console.log(error);
@@ -79,7 +80,7 @@ const Provider = ({ children }) => {
         setUser(null);
         setShowAlert(true);
         setAlertMessage("Logged out successfully");
-        console.log("Logged out successfully");
+        
       })
       .catch((error) => {
         console.log(error);
